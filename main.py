@@ -63,8 +63,8 @@ for i,window in enumerate(window_list):
     for j in range(np.shape(data)[0]):
         time_rr = data[j,1]
         rr_int = data[j,0]
-        rr_int = np.array([rr_int[k] for k in range(len(rr_int)) if rr_int[k]<2000 and rr_int[k]>300])
-        time_rr = np.array([time_rr[k] for k in range(len(rr_int)) if rr_int[k]<2000 and rr_int[k]>300])
+        rr_int = np.array([rr_int[k] for k in range(len(rr_int)) if rr_int[k]<1500 and rr_int[k]>400])
+        time_rr = np.array([time_rr[k] for k in range(len(rr_int)) if rr_int[k]<1500 and rr_int[k]>400])
 #        quality_arr = compute_outlier_ecg(np.array(time_rr),np.array(rr_int)/1000)
 #        rr_int = np.array([rr_int[k] for k in range(len(quality_arr)) if quality_arr[k][1]==Quality.ACCEPTABLE])
 #        time_rr = np.array([time_rr[k] for k in range(len(quality_arr)) if quality_arr[k][1]==Quality.ACCEPTABLE])
